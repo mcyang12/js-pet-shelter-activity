@@ -18,11 +18,10 @@ document.addEventListener("DOMContentLoaded", function() {
   
       // Loop through each pet in the shelter and create a list item for each
       for(let i = 0; i < shelterPet.length; i++){
-        let 
-      
-
-
-        petList.appendChild(  ); //will assist with adding each pet item to be shown in the list on the browser
+        let pet = shelterPet [i];
+        let petItem = document.createElement("li");
+        petItem.textContent = `${pet.name}: $${pet.type} (${pet.age} left)`;
+        petList.appendChild(petItem); //will assist with adding each pet item to be shown in the list on the browser
      }
     }
     // Add some sample pets to the shelter
