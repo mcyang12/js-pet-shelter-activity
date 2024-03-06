@@ -26,9 +26,12 @@ document.addEventListener("DOMContentLoaded", function() {
     }
     // Add some sample pets to the shelter
     addPet("Fido", "Dog", 3); //example
-    
+    addPet("Spot", "Dog", 2);
+    addPet("Goldy", "Cat", 1);
+    addPet("Wiley", "Cat", 2);
+
     // Display the pets in the shelter
-  
+    displayPets();
 
     //STRETCH GOALS:
     // Function to check if the pet shelter has animals that need homes (based on how many animals are in the shelter)
