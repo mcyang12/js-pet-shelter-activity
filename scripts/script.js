@@ -1,17 +1,24 @@
 document.addEventListener("DOMContentLoaded", function() {
     // Define an array to shelter your pets
- 
+    var shelterPet = [];
   
     // Function to add a pet to the shelter - needs to have a param to add a name, type of animal, and age
-    
-  
+    function addPet (petName, petType, petAge){
+      name: petName,
+      type: petType,
+      age: petAge
+    }
+    shelterPet.push(pet);
+    console.log(shelterPet);
+}
     // Function to display pets in the shelter - given to you!
     function displayPets() {
       let petList = document.getElementById("pet-list");
       petList.innerHTML = ""; // Clear the previous pet list
   
       // Loop through each pet in the shelter and create a list item for each
-      for(       ){
+      for(let i = 0; i < shelterPet.length; i++){
+        let 
       
 
 
