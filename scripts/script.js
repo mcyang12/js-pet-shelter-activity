@@ -1,15 +1,15 @@
 document.addEventListener("DOMContentLoaded", function() {
     // Define an array to shelter your pets
-    var shelterPet = [];
+    var shelterPets = [];
   
     // Function to add a pet to the shelter - needs to have a param to add a name, type of animal, and age
-    function addPet (petName, petType, petAge){
+    function addPets (petName, petType, petAge){
       name: petName,
       type: petType,
       age: petAge
     }
-    shelterPet.push(pet);
-    console.log(shelterPet);
+    shelterPets.push(pet);
+    console.log(shelterPets);
 }
     // Function to display pets in the shelter - given to you!
     function displayPets() {
@@ -17,8 +17,8 @@ document.addEventListener("DOMContentLoaded", function() {
       petList.innerHTML = ""; // Clear the previous pet list
   
       // Loop through each pet in the shelter and create a list item for each
-      for(let i = 0; i < shelterPet.length; i++){
-        let pet = shelterPet [i];
+      for(let i = 0; i < shelterPets.length; i++){
+        let pet = shelterPets [i];
         let petItem = document.createElement("li");
         petItem.textContent = `${pet.name}: $${pet.type} (${pet.age} left)`;
         petList.appendChild(petItem); //will assist with adding each pet item to be shown in the list on the browser
@@ -35,7 +35,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
     //STRETCH GOALS:
     // Function to check if the pet shelter has animals that need homes (based on how many animals are in the shelter)
- 
+    function checkPets();
+
   
     // Check if the pet shelter has animals that need homes by calling the previous function
 
