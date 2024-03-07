@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function() {
       console.log(petShelter);
     }
     // Function to display pets in the shelter - given to you!
-    function displayPets() {
+    function displaypetShelter() {
       let petList = document.getElementById("pet-list");
       petList.innerHTML = ""; // Clear the previous pet list
   
@@ -36,9 +36,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
     //STRETCH GOALS:
     // Function to check if the pet shelter has animals that need homes (based on how many animals are in the shelter)
-    function checkPets() {
-      let petHome = document.getElementById("pet-home");
-      petHome.innerHTML = "";
+    function shelterStatus(){
+      let numberOfShelter = 4
+      let status = document.getElementById("shelter-status");
+      let updateStatus = document/createElement("h4");
+      if(numberOfShelter < petShelter.length){
+        updateStatus.textContent = "Pets Looking For A Home!";
+        status.appendChild(updateStatus);
+      }
     }
   
     // Check if the pet shelter has animals that need homes by calling the previous function
