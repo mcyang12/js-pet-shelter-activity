@@ -20,9 +20,9 @@ document.addEventListener("DOMContentLoaded", function() {
       // Loop through each pet in the shelter and create a list item for each
       for(let i = 0; i < petShelter.length; i++){
         let pet = petShelter[i];
-        let petList = document.createElement("li");
-        petList.textContent = `${pet.name}: $${pet.type} (${pet.age} left)`;
-        petList.appendChild(petList); //will assist with adding each pet item to be shown in the list on the browser
+        let petHouse = document.createElement("li");
+        petHouse.textContent = `${pet.name}: ${pet.type} (${pet.age})`;
+        petList.appendChild(petHouse); //will assist with adding each pet item to be shown in the list on the browser
      }
     }
     // Add some sample pets to the shelter
@@ -38,16 +38,18 @@ document.addEventListener("DOMContentLoaded", function() {
     // Function to check if the pet shelter has animals that need homes (based on how many animals are in the shelter)
     function shelterStatus(){
       let numberOfShelter = 4
-      let status = document.getElementById("shelter-status");
-      let updateStatus = document/createElement("h4");
-      if(numberOfShelter < petShelter.length){
-        updateStatus.textContent = "Pets Looking For A Home!";
-        status.appendChild(updateStatus);
-      }
+      if(numberOfShelter >= petShelter.length){
+          console.log ("Pets Have A Home!")
+        }else {
+          console.log ("Pets Still Need A Home!")
+        }
+      // if(petShelter.length > numberOfShelter){
+      //   console.log( "pets need homes" );
+      // }
     }
   
     // Check if the pet shelter has animals that need homes by calling the previous function
-    shelterStatus ();
+    shelterStatus();
   
     // Function to calculate the average age of pets in the shelter
     function averagePetAge(){
