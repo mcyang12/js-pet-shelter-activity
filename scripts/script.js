@@ -1,38 +1,38 @@
 document.addEventListener("DOMContentLoaded", function() {
     // Define an array to shelter your pets
-    var shelterPets = [];
+    var petShelter = [];
   
     // Function to add a pet to the shelter - needs to have a param to add a name, type of animal, and age
-    function addPets (petName, petType, petAge){
-      name: petName,
-      type: petType,
-      age: petAge
+    function addPet(petName, petType, petAge){
+      let pet = {
+        name: petName,
+        type: petType,
+        age: petAge
+      }
+      petShelter.push(pet);
+      console.log(petShelter);
     }
-    shelterPets.push(pet);
-    console.log(shelterPets);
-}
     // Function to display pets in the shelter - given to you!
     function displayPets() {
       let petList = document.getElementById("pet-list");
       petList.innerHTML = ""; // Clear the previous pet list
   
       // Loop through each pet in the shelter and create a list item for each
-      for(let i = 0; i < shelterPets.length; i++){
-        let pet = shelterPets [i];
-        let petItem = document.createElement("li");
-        petItem.textContent = `${pet.name}: $${pet.type} (${pet.age} left)`;
-        petList.appendChild(petItem); //will assist with adding each pet item to be shown in the list on the browser
+      for(let i = 0; i < petShelter.length; i++){
+        let pet = petShelter[i];
+        let petList = document.createElement("li");
+        petList.textContent = `${pet.name}: $${pet.type} (${pet.age} left)`;
+        petList.appendChild(petList); //will assist with adding each pet item to be shown in the list on the browser
      }
     }
     // Add some sample pets to the shelter
     addPet("Fido", "Dog", 3); //example
-    addPet("Spot", "Dog", 2);
-    addPet("Goldy", "Cat", 1);
-    addPet("Wiley", "Cat", 2);
+    addPet("Bubbles", "Panda", 5);
+    addPet("Ash", "Cat", 2);
+    addPet("Spot", "Goldfish", 1);
 
     // Display the pets in the shelter
-    displayPets();
-
+    displaypetShelter();
     //STRETCH GOALS:
     // Function to check if the pet shelter has animals that need homes (based on how many animals are in the shelter)
     function checkPets() {
